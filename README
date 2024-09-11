@@ -1,0 +1,38 @@
+Chatbot para Discord usando Ruby com a gem discordrb. Esse chatbot responderá a mensagens simples.
+
+1. Initial Setup
+Make sure you have Ruby installed on your system. If you don't already have discordrb installed, you can add that gem to your project.
+
+mkdir discord_bot
+cd discord_bot
+
+# Gemfile
+source 'https://rubygems.org'
+
+gem 'discordrb'
+
+
+bundle install
+
+2. Creating a Bot in Discord
+Go to the Discord Developer Portal.
+Create a new application and add a bot in the "Bot" section.
+Copy the bot token, as you will need it for the code.
+Add the bot to your server using the link generated in the "OAuth2" tab with the bot scope and necessary permissions.
+
+
+3. Bot Code 
+(bot.rb)
+
+To run the bot, run the following command in the terminal inside the project folder:
+ruby bot.rb
+
+The bot will connect to Discord and be ready to respond to the commands you specify.
+
+Explanations and Customizations
+TOKEN: Replace 'YOUR_BOT_TOKEN' with your bot's token so that it can connect to Discord.
+Events and Commands:
+bot.message(with_text: 'Hi'): Responds with "Hello" when someone says "Hi".
+bot.message(start_with: '!ping'): Responds with "Pong!" when someone types !ping.
+bot.message(start_with: '!help'): Lists the available commands.
+Server and Channel Filtering: Use SERVER_ID and CHANNEL_ID to limit the bot's responses to a specific server or channel.
